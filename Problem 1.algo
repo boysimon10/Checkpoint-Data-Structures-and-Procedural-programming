@@ -1,0 +1,54 @@
+ALGORITHM problem1
+VAR
+    ensemble1 : ARRAY_OF INTEGER[4];  // Déclare un tableau d'entiers de taille 4
+    ensemble2 : ARRAY_OF INTEGER[5];  // Déclare un autre tableau d'entiers de taille 5
+    somme: INTEGER := 0;  // Initialise la variable "somme" à 0 pour stocker la somme des éléments distincts
+    n1, n2: INTEGER;  // Déclare deux variables pour stocker les longueurs des tableaux
+    element_present: BOOLEAN := FALSE;  // Initialise une variable booléenne pour vérifier si un élément est présent dans l'autre tableau
+
+BEGIN
+    ensemble1 := [3, 1, 7, 9];  // Initialise le premier tableau avec des valeurs
+    ensemble2 := [2, 4, 1, 9, 3];  // Initialise le deuxième tableau avec des valeurs
+    n1 := ensemble1.length;  // Obtient la longueur du premier tableau
+    n2 := ensemble2.length;  // Obtient la longueur du deuxième tableau
+
+    // Parcours le premier tableau
+    FOR i FROM 0 TO n1 - 1 STEP 1 DO
+
+        // Parcours le deuxième tableau pour comparer les éléments
+        FOR j FROM 0 TO n2 - 1 STEP 1 DO
+            IF ensemble1[i] = ensemble2[j] THEN
+                element_present := TRUE;  // Marque l'élément comme présent s'il est trouvé dans l'autre tableau
+                EXIT;  // Quitte la boucle interne si un élément correspond
+            END_IF
+        END_FOR
+
+        // Si l'élément n'est pas présent dans l'autre tableau, ajoute-le à la somme
+        IF NOT element_present THEN
+            somme := somme + ensemble1[i];
+        END_IF
+    END_FOR
+
+    // Réinitialise la variable "element_present" pour la deuxième itération
+    element_present := FALSE;
+
+    // Parcours le deuxième tableau
+    FOR i FROM 0 TO n2 - 1 STEP 1 DO
+
+        // Parcours le premier tableau pour comparer les éléments
+        FOR j FROM 0 TO n1 - 1 STEP 1 DO
+            IF ensemble2[i] = ensemble1[j] THEN
+                element_present := TRUE;  // Marque l'élément comme présent s'il est trouvé dans l'autre tableau
+                EXIT;  // Quitte la boucle interne si un élément correspond
+            END_IF
+        END_FOR
+
+        // Si l'élément n'est pas présent dans l'autre tableau, ajoute-le à la somme
+        IF NOT element_present THEN
+            somme := somme + ensemble2[i];
+        END_IF
+    END_FOR
+
+    // Affiche la somme des éléments distincts
+    Write("La somme des éléments distincts est : " + somme;)
+END
