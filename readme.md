@@ -1,7 +1,10 @@
+#Checkpoint-Data-Structures-and-Procedural-programming
+
+Checkpoint GoMyCode Data Structures and Procedural programming
 - Problem 1
 Étape 1 : Déclaration de variables
 Déclare les variables, y compris deux tableaux d'entiers (ensemble1 et ensemble2), une variable somme,
- n1 et n2 pour les longueurs des tableaux, et une variable booléenne (element_present) pour suivre la présence des éléments.
+n1 et n2 pour les longueurs des tableaux, et une variable booléenne (element_present) pour suivre la présence des éléments.
 
 Étape 2 : Initialisation des tableaux
 Initialise les tableaux avec des valeurs.
@@ -24,13 +27,13 @@ Affiche la somme totale des éléments distincts
 
 - Problem 2
 Procédure dot_product : Cette procédure calcule le produit scalaire entre deux vecteurs en utilisant des tableaux d'entiers.
- Elle parcourt les éléments des vecteurs et accumule le résultat dans ps.
+Elle parcourt les éléments des vecteurs et accumule le résultat dans ps.
 
 Algorithme Orthogonal : Cet algorithme permet de vérifier l'orthogonalité de n paires de vecteurs en appelant la procédure dot_product.
- Si le produit scalaire est nul, il affiche que les vecteurs sont orthogonaux, sinon qu'ils ne le sont pas.
+Si le produit scalaire est nul, il affiche que les vecteurs sont orthogonaux, sinon qu'ils ne le sont pas.
 
 Fonction dot_product_func : Cette fonction réalise le même calcul de produit scalaire que la procédure dot_product,
- mais renvoie la valeur au lieu de l'enregistrer dans ps.
+mais renvoie la valeur au lieu de l'enregistrer dans ps.
 
 Algorithme Orthogonalavecfunction : Cet algorithme vérifie l'orthogonalité de n paires de vecteurs en utilisant la fonction dot_product_func.
- Il affiche le résultat de la vérification pour chaque paire.
+Il affiche le résultat de la vérification pour chaque paire.
